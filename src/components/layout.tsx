@@ -21,8 +21,8 @@ const Layout = ({ children }: LayoutProps) => {
 	return (
 		<>
 			<Header siteTitle={data.site.siteMetadata?.title || `Welcome to ZBlog`} />
+			<main>{children}</main>
 			<div>
-				<main>{children}</main>
 				<footer
 					style={{
 						marginTop: `2rem`,

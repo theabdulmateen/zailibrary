@@ -6,6 +6,7 @@ module.exports = {
 			fontFamily: {
 				body: ['Arapey'],
 				caption: ['Khula'],
+				logo: ['Italianno'],
 			},
 		},
 	},
