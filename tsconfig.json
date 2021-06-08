@@ -10,7 +10,7 @@
 		"allowJs": true,
 		"jsx": "react",
 		"moduleResolution": "node",
-		"rootDir": "src",
+		"rootDir": "./",
 		"forceConsistentCasingInFileNames": true,
 		"noImplicitReturns": true,
 		"noImplicitThis": true,
@@ -35,7 +35,10 @@
 		"acceptance-tests",
 		"webpack",
 		"jest",
-		"src/setupTests.ts"
+		"src/setupTests.ts",
+		"comments-api/",
+		"graphql-comments.types.ts",
+		"graphql.types.ts"
 	],
 	"typeRoots": ["./node_modules/@types"],
 	"include": ["**/*.ts", "**/*.tsx"]

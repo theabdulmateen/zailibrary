@@ -22,12 +22,11 @@ type Meta =
 function SEO({ description, lang, meta, title }: SEOProps) {
 	const { site } = useStaticQuery(
 		graphql`
-			query {
+			query SiteMetadataQuery {
 				site {
 					siteMetadata {
 						title
 						description
-						author
 					}
 				}
 			}

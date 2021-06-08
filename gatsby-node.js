@@ -8,7 +8,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
 	const result = await graphql(
 		`
-			{
+			query MarkdownRemarkQuery {
 				allMarkdownRemark(
 					sort: { fields: [frontmatter___date], order: DESC }
 					limit: 1000
@@ -41,6 +41,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 				component: blogPost,
 				context: {
 					id: post.id,
+					slug: post.fields.slug,
 					previousPostId,
 					nextPostId,
 				},
@@ -71,18 +72,18 @@ exports.createSchemaCustomization = ({ actions }) => {
 	// blog posts are stored inside "content/blog" instead of returning an error
 	createTypes(`
 		type MarkdownRemark implements Node {
-		frontmatter: Frontmatter
-		fields: Fields
+			frontmatter: Frontmatter
+			fields: Fields
 		}
 
 		type Frontmatter {
-		title: String
-		description: String
-		date: Date @dateformat
+			title: String
+			description: String
+			date: Date @dateformat
 		}
 
 		type Fields {
-		slug: String
+			slug: String
 		}
-  `)
+	`)
 }

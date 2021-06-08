@@ -8,50 +8,42 @@
 	@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap');
 	@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 	@import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&display=swap');
-	/* 
-	@font-face {
-		font-family: 'Arapey';
-		font-weight: 400;
-		src: url(/fonts/Arapey-Regular.tff) format('truetype');
-	}
-	@font-face {
-		font-family: 'Arapey-Italic';
-		font-weight: 400;
-		src: url(/fonts/Arapey-Italic.tff) format('truetype');
-	}
-	@font-face {
-		font-family: 'Khula';
-		font-weight: 300;
-		src: url(/fonts/Khula-Light.tff) format('truetype');
-	}
-	@font-face {
-		font-family: 'Khula';
-		font-weight: 400;
-		src: url(/fonts/Khula-Regular.tff) format('truetype');
-	}
-	@font-face {
-		font-family: 'Khula';
-		font-weight: 600;
-		src: url(/fonts/Khula-SemiBold.tff) format('truetype');
-	}
-	@font-face {
-		font-family: 'Khula';
-		font-weight: 700;
-		src: url(/fonts/Khula-Bold.tff) format('truetype');
-	}
-	@font-face {
-		font-family: 'Khula';
-		font-weight: 800;
-		src: url(/fonts/Khula-ExtraBold.tff) format('truetype');
-	} */
 }
 
 html,
 body {
 	@apply font-body;
+	-webkit-font-smoothing: antialiased;
+}
+
+.base-container {
+	transition: 0.5s transform;
+}
+
+.mininav {
+	height: 75px;
+	transform: translateY(-75px);
+	transition: 0.3s transform;
+}
+
+.sidebar-transition {
+	transition: 0.4s transform ease-in-out;
 }
 
 .landing-image {
 	background-size: contain;
-	height: 600px;
+	height: 100%;
+}
+
+.transition-blogs {
+	transition: transform 0.5s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-rendering: optimizeLegibility;
 }

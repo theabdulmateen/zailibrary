@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
 	mode: 'jit',
 	darkMode: false,
@@ -8,6 +10,11 @@ module.exports = {
 				caption: ['Khula'],
 				logo: ['Italianno'],
 			},
+		},
+		colors: {
+			...colors,
+			transparent: 'transparent',
+			current: 'currentColor',
 		},
 	},
 	variants: {

@@ -1,0 +1,25 @@
+query CommentsBySlug($slug: String!) {
+	comments {
+		zailibrary_comments(where: { slug: { _eq: $slug } }) {
+			date
+			id
+			name
+			parent_comment_id
+			slug
+			text
+		}
+	}
+}
+
+mutation AddComment($slug: String!, $text: String!, $name: String!) {
+	comments {
+		insert_zailibrary_comments_one(object: { slug: $slug, text: $text, name: $name }) {
+			date
+			id
+			name
+			parent_comment_id
+			slug
+			text
+		}
+	}
+}
